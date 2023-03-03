@@ -1,5 +1,8 @@
 <script>
 import Card from "./SingleCard.vue";
+import axios from "axios";
+import { store } from "../data/store";
+
 export default {
 	data() {
 		return {
@@ -9,6 +12,18 @@ export default {
 
 	components: {
 		Card,
+	},
+
+	methods: {
+		fetchMovies(text) {
+			axios
+				.get(
+					`${store.baseUri}movie?api_key=${store.apiKey}&query=${text}&language=it`
+				)
+				.then((response) => {
+					store.movies = response.data.results;
+				});
+		},
 	},
 };
 </script>

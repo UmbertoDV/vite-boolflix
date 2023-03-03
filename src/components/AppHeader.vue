@@ -5,6 +5,7 @@ export default {
 	data() {
 		return {
 			headerData: headerData,
+			searchText: "",
 		};
 	},
 
@@ -28,17 +29,18 @@ export default {
 		</div>
 		<div class="right-header d-flex align-items-center gap-3 px-3">
 			<div class="input-group flex-nowrap">
+				<input
+					type="text"
+					v-model="searchText"
+					class="form-control bg-dark"
+					placeholder="Cerca un film o serie tv"
+				/>
 				<span class="input-group-text bg-dark" id="addon-wrapping"
 					><font-awesome-icon icon="fa-solid fa-magnifying-glass"
 				/></span>
-				<input
-					type="text"
-					class="form-control bg-dark"
-					placeholder="Cerca un film"
-					aria-describedby="addon-wrapping"
-				/>
 			</div>
 			<span>KIDS</span>
+
 			<font-awesome-icon icon="fa-solid fa-bell" />
 			<img class="avatar" src="/netflix-avatar.png" alt="" />
 			<font-awesome-icon icon="fa-solid fa-sort-down" />
@@ -77,9 +79,11 @@ li {
 }
 .input-group-text,
 .form-control,
-.form-control::placeholder,
 .form-control:focus {
 	color: $whiteColor;
+}
+.form-control::placeholder {
+	color: gray;
 }
 
 //SCSS

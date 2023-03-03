@@ -7,6 +7,13 @@ export default {
 		};
 	},
 
+	props: {
+		titolo: String,
+		originale: String,
+		lingua: String,
+		copertina: String,
+	},
+
 	// components:{
 	//	 HelloWorld,
 	// }
