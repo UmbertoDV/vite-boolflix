@@ -16,6 +16,7 @@ export default {
 <template>
 	<div class="card-list py-3">
 		<div class="container-fluid">
+			<h2>FILM</h2>
 			<div class="row">
 				<Card></Card>
 			</div>

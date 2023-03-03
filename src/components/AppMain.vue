@@ -1,5 +1,6 @@
 <script>
-import CardList from "./CardList.vue";
+import CardListFilms from "./CardListFilms.vue";
+import CardListSeries from "./CardListSeries.vue";
 export default {
 	data() {
 		return {
@@ -8,13 +9,15 @@ export default {
 	},
 
 	components: {
-		CardList,
+		CardListFilms,
+		CardListSeries,
 	},
 };
 </script>
 
 <template>
-	<CardList />
+	<CardListFilms />
+	<CardListSeries />
 </template>
 
 <style lang="scss" scoped>
