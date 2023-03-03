@@ -1,4 +1,4 @@
-export const headerObj = {
+export default {
 	home: {
 		text: "HOME",
 		url: "#",
