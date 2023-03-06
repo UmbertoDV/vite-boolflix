@@ -2,6 +2,7 @@
 import headerData from "../data/headerData";
 
 export default {
+	emits: ["fetchMovies"],
 	data() {
 		return {
 			headerData: headerData,
@@ -35,7 +36,10 @@ export default {
 					class="form-control bg-dark"
 					placeholder="Cerca un film o serie tv"
 				/>
-				<span class="input-group-text bg-dark" id="addon-wrapping"
+				<span
+					@click="$emit('fetchMovies', searchText)"
+					class="input-group-text bg-dark"
+					id="addon-wrapping"
 					><font-awesome-icon icon="fa-solid fa-magnifying-glass"
 				/></span>
 			</div>

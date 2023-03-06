@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-	<AppHeader />
+	<AppHeader @fetchMovies="fetchMovies" />
 	<AppMain></AppMain>
 </template>
 
