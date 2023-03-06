@@ -1,8 +1,9 @@
 <script>
 import headerData from "../data/headerData";
+import { store } from "../data/store";
 
 export default {
-	emits: ["fetchMovies"],
+	emits: ["startSearch"],
 	data() {
 		return {
 			headerData: headerData,
@@ -37,7 +38,7 @@ export default {
 					placeholder="Cerca un film o serie tv"
 				/>
 				<span
-					@click="$emit('fetchMovies', searchText)"
+					@click="$emit('startSearch', searchText)"
 					class="input-group-text bg-dark"
 					id="addon-wrapping"
 					><font-awesome-icon icon="fa-solid fa-magnifying-glass"
@@ -88,6 +89,9 @@ li {
 }
 .form-control::placeholder {
 	color: gray;
+}
+#addon-wrapping {
+	cursor: pointer;
 }
 
 //SCSS

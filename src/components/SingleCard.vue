@@ -22,10 +22,8 @@ export default {
 
 <template>
 	<div class="col-xxl-2 col-md-3 col-sm-6">
-		<img
-			src="https://image.tmdb.org/t/p/original/5QHWgqaBxZI1eM5e3YhyKzY5o3z.jpg"
-			alt=""
-		/>
+		<img :src="copertina" alt="" />
+		<span>{{ titolo }}</span>
 	</div>
 </template>
 
