@@ -16,6 +16,7 @@ export default {
 					`${store.baseUri}movie?api_key=${store.apiKey}&query=${text}&language=it`
 				)
 				.then((response) => {
+					store.movies = "";
 					store.movies = response.data.results;
 					console.log(store.movies);
 				});
